@@ -1,0 +1,131 @@
+<div class="personal-information">
+    <div class="personal-information-container">
+        <ul class="plan-book-menu">
+            <li class="active">Review the information carefully and submit</li>
+        </ul>
+        <div class="information-form final-review">
+            <div class="row">
+                <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="row ">
+                        <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"><span>Order Type:</span></div>
+                        <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p>{{user.planType}}</p></div>
+                    </div>
+                </div>
+                <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="row ">
+                        <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"><span>Place Name:</span></div>
+                        <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p>{{user.selectedPlace}}</p></div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="general-information">
+                <div class="row">
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Full Name:</span></div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.plan.fullName}}</p></div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Email:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.plan.email}}</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Mobile:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.plan.mobileNumber}}</p></div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Number of People*:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.plan.numOfPeople}}</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Trip Duration:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.plan.numOfDays}}</p></div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Net Amount:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p> <i class="fa fa-inr"></i> {{user.plan.priceToPay}}</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row ">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Journey Starting Date:</span></div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p >{{user.journeyStartingDate}}</div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row ">
+                            <div class="key col-lg-2 col-md-2 col-sm-2 col-xs-5"> <span>Address:</span></div>
+                            <div class="value col-lg-10 col-md-10 col-sm-10 col-xs-7"> <p data-ng-repeat="lines in user.plan.address">{{lines}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+           <div class="attractions-information">
+               <div class="info row" data-ng-show="user.ourPlanId == -1">
+                   <div class="key col-lg-2 col-md-2 col-sm-2 col-xs-5"><span>Attractions :</span></div>
+                   <div class="value col-lg-10 col-md-10 col-sm-10 col-xs-7">
+                       <p ng-show=" user.attractionsList.length == 0">No attraction added</p>
+                       <p data-ng-repeat="attraction in user.attractionsList">
+                           <b> Name </b>:  {{attraction.attraction_name}} <br/>
+                           <b>Info</b> :  {{attraction.attraction_about}}
+                           <br/> <br/>
+                       </p>
+                   </div>
+               </div>
+               <div class="info row" data-ng-show="user.ourPlanId != -1">
+                   Our Plan for <b>{{selectedPlaceInfo.place_name}}</b> is selected.
+               </div>
+           </div>
+            <hr/>
+            <div class="proceed-buttons row" >
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-4">
+                    <span ui-sref="planATrip.proceed({'planningStage':'personal-information'})"
+                          data-ng-click="proceedToAddPersonalInformation({})">
+                        <i class="fa fa-arrow-left"></i> Go back
+                    </span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-8">
+                    <span ng-show="!isLoggedIn" onclick="LaunchDialog('login-dialog')">Login and Submit</span>
+                    <i class="fa fa-spin fa-spinner" ng-show="isProgressGoing"></i> 
+
+<a ng-show="isLoggedIn&&user.plan.priceToPay=='300'" href="https://www.instamojo.com/tourepedia1/plan-only/"  rel="im-checkout" data-behavior="remote" data-style="dark" data-text="Pay Rs. {{user.plan.priceToPay}}" data-token="0de8a8dfd7f8b644de197b54dabc99f1" > <span ng-show="isLoggedIn" data-ng-click="submitThePlan()">  Pay Rs. {{user.plan.priceToPay}} </span> 
+</a>
+
+
+<a ng-show="isLoggedIn&&user.plan.priceToPay=='500'" href="https://www.instamojo.com/tourepedia1/plan-only-8e41a/" rel="im-checkout" data-behavior="remote" data-style="dark" data-text="Pay Rs. {{user.plan.priceToPay}}" data-token="0de8a8dfd7f8b644de197b54dabc99f1"> <span ng-show="isLoggedIn" data-ng-click="submitThePlan()">  Pay Rs. {{user.plan.priceToPay}} </span> 
+</a>
+
+<a ng-show="isLoggedIn&&user.plan.priceToPay=='1000'" href="https://www.instamojo.com/tourepedia1/plan-only-2dc99/" rel="im-checkout" data-behavior="remote" data-style="dark" data-text="Pay Rs. {{user.plan.priceToPay}}" data-token="0de8a8dfd7f8b644de197b54dabc99f1"> <span ng-show="isLoggedIn" data-ng-click="submitThePlan()">  Pay Rs. {{user.plan.priceToPay}} </span> 
+</a>
+
+<script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js">
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+
+
+
+

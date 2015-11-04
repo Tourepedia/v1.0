@@ -1,0 +1,337 @@
+[
+  {
+    "id":0,
+    "name": "Dehradun and Mussoorie",
+    "state": "Uttarakhand",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "Local sightseeing by Cabs in Dehradun and Mussoorie.",
+      "A 2 day, 2 night stay at Mussoorie followed by 1 day of sightseeing at Dehradun.",
+      "Accommodation in a Deluxe hotel."
+    ],
+    "sightSeeing":[
+      "In Mussoorie- Kempty Falls, Mussoorie Lake, Gun Hill, Camel's Back Road, Lal Tibba, Mall Road.",
+      "In Dehradun- Tapkeshwar Temple, Forest Research Institute, Robber's Cave, Sahasradhara."
+    ],
+    "itinerary":[
+      "Evening departure from IITK for Dehradun by train.",
+      "Arrival at Dehradun- Head to Mussoorie by Taxi-Mussoorie Lake(morning)-Check in to Hotel(noon)-Sightseeing(Kempty Falls,Mall Road)- Night stay at Mussoorie.",
+      "Breakfast- Sightseeing(Gun Hill, Camel's Back Road, Lal Tibba)-Night stay at Mussoorie.",
+      "Back to Dehradun- Sightseeing(Tapkeshwar Temple, Forest Research Institute, Robber's Cave, Sahasradhara)-Departure for IITK and next morning arrival at IITK."
+    ],
+    "price" : 4500,
+    "type": "Extended Weekends",
+    "img":"dehrahunAndMusoorie.jpg",
+    "discountedPrice":""
+  },
+  {
+    "id":1,
+    "name": "Rishikesh",
+    "state": "Uttarakhand",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "Local sightseeing by Cabs in Rishikesh",
+      "A 2 day, 1 night stay at Rishikesh.",
+      "Accommodation in a Deluxe hotel."
+    ],
+    "sightSeeing":[
+      "Ram Jhula, Lakshman Jhula, Munni ki reti, Neelkanth Mahadev temple."
+    ],
+    "Adventures":[
+      "River rafting, [Bungee jumbing, Paragliding, Waterfall trekking]- Additional activities."
+    ],
+    "itinerary":[
+      "Evening departure from IITK for Rishikesh by train.",
+      "Arrival at Rishikesh- Check in to hotel(morning)-Sightseeing(Ram Jhula, Lakshman Jhula, Munni ki reti, Neelkanth Mahadev temple)-night stay.",
+      "Breakfast- River rafting and other additional activities (if any), departure for IITK and next morning arrival at IITK."   
+],
+    "price" : 3000,
+    "type": "Weekends",
+    "img":"rishikesh.jpg",
+    "discountedPrice":""
+
+  },
+  {
+    "id":2,
+    "name": "Rishikesh Adventure Special",
+    "state": "Uttarakhand",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "Local sightseeing by Cabs in Rishikesh.",
+      "A 2 day, 1 night stay at Rishikesh.",
+      "Accommodation at camping site."
+    ],
+    "sightSeeing":[
+      "Ram Jhula, Lakshman Jhula, Munni ki reti, Neelkanth Mahadev temple."
+    ],
+    "Adventures":[
+      "River rafting, Camping, Bonfire, [Bungee jumbing, Paragliding, Waterfall trekking]- additional activities."
+    ],
+    "itinerary":[
+      "Evening departure from IITK for Rishikesh by train.",
+      "Arrival at Rishikesh- Head to camping site- Camping- Bonfire- Night stay at camp.",
+      "Breakfast- River rafting and other additional activities (if any), departure for IITK and next morning arrival at IITK."
+    ],
+    "price" : 4000,
+    "type": "Weekends",
+    "img":"rishikeshAdventureSpecial.jpg",
+    "discountedPrice":""
+  },
+  {
+    "id":3,
+    "name": "Agra and Fatehpur Sikri",
+    "state": "Uttar Pradesh",
+    "about":"A visit to Taj Mahal with your special one ignites the relationship you share, such is the power of this beautiful architecture.",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "All local sightseeing by AC cabs in Agra and Fatehpur Sikri.",
+      "A 2 day, 1 night stay at Agra.",
+      "Accommodation in a Deluxe hotel."
+    ],
+    "sightSeeing":[
+      "In Agra- Taj Mahal, Agra Fort, Jama Masjid, Akbar's tomb(Sikandra), Gurudwara Guru ka Taal.",
+      "In Fatehpur Sikri- Palace of Jodha Bai, Panch Mahal, Buland Darwaza, Diwan-i-khas,Diwan-i-aam."
+    ],
+    "itinerary":[
+      "Late night (11 pm)departure from IITK for Agra by Train/Bus/Taxi.",
+      "Arrival at Agra- Check in to hotel(morning)-Sightseeing(Agra)- Night stay at Agra.",
+      "Breakfast- Sightseeing(Fatehpur Sikri)- Departure for IITK and late night(2 am) arrival at IITK."
+    ],
+    "price" : 3500,
+    "type": "Weekends",
+    "img":"agraAndFatehpur1.jpg",
+    "discountedPrice":3000
+  },
+  {
+    "id":4,
+    "name": "Agra and Fatehpur Sikri",
+    "state": "Uttar Pradesh",
+    "about":"A visit to Taj Mahal with your special one ignites the relationship you share, such is the power of this beautiful architecture.",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "All local sightseeing by AC cabs in Agra and Fatehpur Sikri.",
+      "One day at Agra and Fatehpur Sikri."
+    ],
+    "sightSeeing":[
+      "In Agra- Taj Mahal, Agra Fort, Akbar's tomb(Sikandra).",
+      "In Fatehpur Sikri- Palace of Jodha Bai, Panch Mahal, Buland Darwaza, Diwan-i-khas, Diwan-i-aam."
+    ],
+    "itinerary":[
+      "Late night (11 pm)departure from IITK for Agra by Train/Bus/Taxi.",
+      "Arrival at Agra, Sightseeing(Agra and Fatehpur Sikri)- Departure for IITK and late night(2 am) arrival at IITK."
+    ],
+    "price" : 2200,
+    "type": "Weekends",
+    "img":"agraAndFatehpur2.jpg",
+    "discountedPrice":1500
+  },
+  {
+    "id":5,
+    "name": "Binsar and Gwaldam",
+    "state": "Uttarakhand",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "Local sightseeing by Cabs in Binsar and Gwaldam.",
+      "A 2 day, 1 night stay at Binsar and 1 day, 1 night stay at Gwaldam.",
+      "Accommodation in a Deluxe Hotel."
+    ],
+    "sightSeeing":[
+      "In Binsar- Wildlife Sanctury, Kasar Devi Temple, Khali Estate, Zero Point, Bineshwar Mahadev Temple, Binsar Sanctuary Museum.",
+      "In Gwaldam- Sunrise point, estate visits and Baijnath temple."
+    ],
+    "adventures":[
+      "Jungle trekking."
+    ],
+    "itinerary":[
+      "Evening departure from IITK for Kathgodam by train.",
+      "Arrival in Kathgodam-Head to Binsar- Reach Binsar by afternoon- Check in to hotel- Local sightseeing and sunset view then night stay.",
+      "Breakfast- Sightseeing(Zero Point- Kasar Devi Temple- Wildlife Sanctury- Bineshwar Mahadev Temple)- Head to Gwaldam by taxi- Sunset view at Gwaldam - Night stay.",
+      "Enjoy the sunrise, along with a majestic view of the Himalayas at Gwaldam- Return to hotel for breakfast- Visit Baijnath Temple- Reach Kathgodam and departure for IITK by train and next morning arrival at IITK."
+    ],
+    "price" : 5000,
+    "type": "Extended Weekends",
+    "img":"binsarAndGwaldam.jpg",
+    "discountedPrice":""
+
+  },
+  {
+    "id":6,
+    "name": "Pithoragarh",
+    "state": "Uttarakhand",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "Local sightseeing by Cabs in Pithoragrah and Patal Bhuvneshwar.",
+      "A 2 day, 1 night stay at Pithoragarh and 1 day, 1 night stay at Patal Bhuvneshwar.",
+      "Accommodation in a Deluxe Hotel."
+    ],
+    "sightSeeing":[
+      "Pithoragarh city & nearby areas, Pithoragarh Fort & Patal Bhuvnehwar."
+    ],
+    "itinerary":[
+      "Evening departure from IITK for Kathgodam by train.",
+      "Arrival at Kathgodam- Head to Pithoragarh and arrival at Pithoragarh by afternoon- Check in to hotel(noon)- Sunset view- Visit pithoragarh  city- Night stay.",
+      "Breakfast- Visit Pithoragarh fort- Head to Patal Bhuvneshwar- Local sightseeing- Night stay at Patal Bhuvneshwar.",
+      "Visit Patal Bhuvneshwar- Return to hotel for lunch- Reach Kathgodam - Departure for IITK by train and next morning arrival at IITK."
+    ],
+    "price" : 5500,
+    "type": "Extended Weekends",
+    "img":"pithoragarh.jpg",
+    "discountedPrice":""
+
+  },
+  {
+    "id":7,
+    "name": "Binsar-Chaukari",
+    "state": "Uttarakhand",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "Local sightseeing by Cabs in Binsar and Chaukari.",
+      "A 2 day, 1 night stay at Binsar and a 1 day and 1 night stay at Chaukari.",
+      "Accommodation in a Deluxe Hotel."
+    ],
+    "sightSeeing":[
+      "In Binsar- Wildlife Sanctury, Kasar Devi Temple, Khali Estate, Zero Point, Bineshwar Mahadev Temple, Binsar Sanctuary Museum.",
+      "In Chaukari- Panchculi sunset point & Chaukari valley."
+    ],
+    "Adventures":[
+      "Jungle trekking."
+    ],
+    "itinerary":[
+      "Evening departure from IITK for Kathgodam by train.",
+      "Arrival at Kathgodam - Head to Binsar- Reach Binsar by afternoon- Check in to hotel(noon)- Sunset view- Night stay.",
+      "Breakfast- Sightseeing(Zero Point- Kasar Devi Temple- Wildlife Sanctury- Bineshwar Mahadev Temple)- Head to chaukari by taxi- Enjoy the glorious sunset at Panch Chuli- Night stay at Chaukari.",
+      "Enjoy in Chaukari valley- Return to hotel for lunch- Reach Kathgodam- Departure for IITK by train and next morning arrival at IITK."
+    ],
+    "price" : 5000,
+    "type": "Extended Weekends",
+    "img":"binsarChaukari.jpg",
+    "discountedPrice":""
+  },
+  {
+    "id":8,
+    "name": "Mussoorie-Chamba",
+    "state": "Uttarakhand",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "Local sightseeing by Cabs in Mussoorie and Chamba.",
+      "A 2 day, 1 night stay at Mussoorie and a 1 day, 1 night stay at Chamba.",
+      "Accommodation in a Deluxe hotel."
+    ],
+    "sightSeeing":[
+      "Kempty Falls, Mussoorie Lake, Gun Hill, Camel's Back.",
+      "Road, Lal Tibba, Mall Road, kanhatal, Chamba valley, Tapkeshwar Temple, Forest Research Institute, Robber's Cave, Sahasradhara."
+    ],
+    "itinerary":[
+      "Evening departure from IITK for Dehradun by train.",
+      "Arrival at Dehradun- Head to Mussoorie- Mussoorie Lake(morning)- Check in to hotel(noon)- Sightseeing (Kempty Falls-Mall Road) - Night stay.",
+      "Breakfast- Sightseeing(Gun Hill, Camel's Back Road, Lal Tibba, kanhatal) -Arrive at Chamba for night stay.",
+      "Morning visit to chamba city- Head to Dehradun- Visit Tapkeshwar Temple, Forest Research Institute, Robber's Cave, Sahasradhara- Departure for IITK and next morning arrival at IITK."
+    ],
+    "price" : 5000,
+    "type": "Extended Weekends",
+    "img":"mussorrieChamba.jpg",
+    "discountedPrice":""
+  },
+  {
+    "id":9,
+    "name": "Jaipur",
+    "state": "Rajasthan",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "All local sightseeing by AC cabs in Jaipur.",
+      "A 2 day, 1 night stay at Jaipur.",
+      "Accommodation in a Deluxe hotel."
+    ],
+    "sightSeeing":[
+      "Amer/Amber Fort, Hawa Mahal, Jal Mahal, Ramniwas Garden, Albert Hall Museum, Birla Mandir, Jantar Mantar, City Palace, Sisodia Rani Palace and Garden and some more."
+    ],
+    "itinerary":[
+      "Departure from IITK for Jaipur by Train/Bus.",
+      "Arrival at Jaipur- Check in to hotel- Sightseeing(Amer/Amber Fort, Jal Mahal, Hawa Mahal, Jantar Mantar, City Palace, Govind Devji Temple)- Night stay.",
+      "Breakfast- Sightseeing(Ramniwas Garden, Albert Hall Museum, Birla Mandir, Sisodia Rani Palace and Garden)- Departure for IITK and next morning arrival at IITK."
+    ],
+    "price" : 3700,
+    "type": "Weekends",
+    "img":"jaipur1.jpg",
+    "discountedPrice":3000
+  },
+  {
+    "id":10,
+    "name": "Jaipur",
+    "state": "Rajasthan",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "All local sightseeing by AC cabs in Jaipur.",
+      "A 3 days, 2 night stay at Jaipur.",
+      "Accommodation in a Deluxe hotel."
+    ],
+    "sightSeeing":[
+      "Amer/Amber Fort, Jaipur Zoo, Govind Dev Ji Temple, Hawa Mahal, Jal Mahal, Ramniwas Garden, Albert Hall Museum, Birla Mandir, Jantar Mantar, City Palace, Sisodia Rani Palace and Garden and some more. "
+    ],
+    "itinerary":[
+      "Departure from IITK for Jaipur by Train/Bus.",
+      "Arrival at Jaipur, check in to hotel- Sightseeing(Hawa Mahal, Jantar Mantar, City Palace, Govind Dev Ji Temple)-night stay.",
+      "Breakfast- Sightseeing(Amer/Amber Fort, Jaigarh Fort, Jal Mahal, Rambagh Golf club, extras[ Central Park, Amar Jawan Jyoyti, Swai Mansingh Stadium])- Night stay.",
+      "Breakfast- Sightseeing(Ramniwas Garden, Albert Hall Museum, Jaipur Zoo, Birla Mandir, Sisodia Rani Palace and Garden)- Departure for IITK and next morning arrival at IITK."
+    ],
+    "price" : 5000,
+    "type": "Extended Weekends",
+    "img":"jaipur2.jpg",
+    "discountedPrice":4500
+  },
+  {
+    "id":11,
+    "name": "Khajuraho",
+    "state": "Madhya Pradesh",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "All local sightseeing by AC cabs in Khajuraho.",
+      "One day at Khajuraho."
+    ],
+    "sightSeeing":[
+      "Khajuraho group of temples, Raneh waterfalls."
+    ],
+    "itinerary":[
+      "Late night (11 pm) departure from IITK for Khajuraho by taxi.",
+      "Arrival at Khajuraho, all day sightseeing in Khajuraho - Departure for IITK and night(10 pm) arrival at IITK."
+    ],
+    "price" : 2200,
+    "type": "Weekends",
+    "img":"khajuraho1.jpg",
+    "discountedPrice":1800
+  },
+  {
+    "id":12,
+    "name": "Khajuraho",
+    "state": "Madhya Pradesh",
+    "about":"This is something about the place which is most important thing for the place",
+    "includes":[
+      "All travelling from your hall gates and return to it.",
+      "All local sightseeing by AC cabs in Khajuraho.",
+      "A 2 day, 1 night stay at Khajuraho.",
+      "Accommodation in a Deluxe hotel."
+    ],
+    "sightSeeing":[
+      "Khajuraho group of temples, Raneh waterfalls, Kalinjar Fort and some more."
+    ],
+    "itinerary":[
+      "Late night (11 pm) departure from IITK for Khajuraho by taxi.",
+      "Arrival at Khajuraho- All day sightseeing and night stay at Khajuraho.",
+      "After breakfast, sightseeing and then departure for IITK- Evening arrival at IITK."
+    ],
+    "price" : 3500,
+    "type": "Weekends",
+    "img":"khajuraho2.jpg",
+    "discountedPrice":3000
+  }
+]

@@ -1,0 +1,73 @@
+<div class="dialog-box sm" id="login-dialog" data-ng-controller="LoginController">
+	<div class="dialog-box-container">
+		<div class="fake-box-body">
+			<div class="fake-close-button"></div>
+		</div>
+		<div class="dialog-box-body">
+			<!-- place your code here -->
+<!-- //////////////////////////////////////////////////// -->
+
+	<div class="panel panel-primary">
+			<div class="panel-heading">
+					<span class="h4">Sign in to Tourepedia</span>
+			</div>
+
+			<div class="panel-body">
+			<!-- <div class="login-container"> -->
+				<form name="loginForm" class="login-form">
+					<div class="form-group">
+ 							<input type="email" placeholder="Email" name="email" id="email" class="form-control no-border" ng-model="user.email"
+							ng-class="{'required-error': loginForm.email.$dirty && loginForm.email.$error.required}" required>
+
+
+						<div class="form-group">
+							<input type="password" placeholder="Password" class="form-control no-border"  name="password" id="password"  ng-model="user.password"
+															ng-class="{'required-error': loginForm.password.$dirty && loginForm.password.$error.required}" required>
+						</div>
+					</div>
+					<div class="form-group">
+					<button  ng-disabled="loginForm.$invalid" class="btn btn-success btn-block" id="login-submit" value="Login"
+						ng-class="{'ok': loginForm.$valid}" data-ng-click="login(user)">Log in</button>
+					</div>
+				</form>
+ 				<div class="line line-dashed"></div>
+				<div class="form-group"><p class="text-center"><small>Do not have an account?</small></p> </div>
+				<div class="form-group"><button onclick="CloseDialog('login-dialog'); LaunchDialog('signUp-dialog')" class="btn btn-primary btn-block">Create an account</button>
+				</div>
+			</div>
+			<!-- and before it -->
+<!-- ////////////////////////////////////////////////////// -->
+			<div class="dialog-close-button" onClick="CloseDialog('login-dialog')">X</div>
+		</div>
+	</div>
+</div>
+</div>
+<style>
+.panel input[type="text"], .panel input[type="number"], .panel input[type="email"], .panel input[type="password"] {
+width:90%;}
+.login-form input.ng-invalid.ng-touched {
+    border-color: #FA787E;
+  }
+
+.login-form input.ng-valid.ng-touched {
+    border-color: #78FA89;
+  }
+.panel{
+  margin-bottom:10px;
+}
+	.login-container .other-options{
+		padding: 20px 0 0 20px;
+	}
+	.login-container .other-options span{
+		cursor: pointer;
+		text-decoration: underline;
+		color: #00B3CA;
+	}
+	.signinForm{
+		padding-top:15px;
+	}
+	.signinForm button{
+		width:90%;
+		margin:auto;
+	}
+</style>

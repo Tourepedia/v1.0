@@ -1,0 +1,49 @@
+<div class="dialog-box sm" id="login-dialog">
+	<div class="dialog-box-container">
+		<div class="fake-box-body">
+			<div class="fake-close-button"></div>
+		</div>
+		<div class="dialog-box-body">
+			<!-- place your code here -->
+<!-- //////////////////////////////////////////////////// -->
+			
+			<div class="login-container">
+				<form name="loginForm">
+					<div class="input-group label-animtaion">
+						<input type="text" name="username" id="username" 
+							ng-model="user.username" 
+							onfocus="MoveMyLabel(['username', 'usernameLabel'])"
+							onfocusOut="ResetLabel(['username', 'usernameLabel'])"
+							ng-class="{'required-error': loginForm.username.$dirty && loginForm.username.$error.required}"
+							required
+						>
+						<label id="usernameLabel" for="username">Username</label>
+					</div>
+					<div class="input-group label-animtaion">
+						<input type="password" name="password" id="password" 
+							ng-model="user.password" 
+							onfocus="MoveMyLabel(['password', 'passwordLabel'])"
+							onfocusOut="ResetLabel(['password', 'passwordLabel'])"
+							ng-class="{'required-error': loginForm.password.$dirty && loginForm.password.$error.required}"
+							required
+						>
+						<label id="passwordLabel" for="password">Password</label>
+					</div>
+					<div class="input-group">
+						<input type="button" id="login-submit" value="Login" 
+							ng-class="{'ok': loginForm.$valid}"
+						>
+						<div style="clear: both;"></div>
+					</div>
+				</form>
+			</div>
+
+			<!-- and before it -->
+<!-- ////////////////////////////////////////////////////// -->
+			<div class="dialog-close-button" onClick="CloseDialog('login-dialog')">X</div>
+		</div>		
+	</div>
+</div>
+
+
+

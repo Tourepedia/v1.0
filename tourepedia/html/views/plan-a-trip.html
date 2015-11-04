@@ -1,0 +1,25 @@
+<div class="planning-procedure-container" data-ng-controller="TripPlanningController">
+    <div class="trip-plan-progress-bar">
+        <ul>
+            <li class="done">Selected Destination</li>
+            <li ng-class="{'current':userAtAddAttraction, 'done': userAtAddInformation||userAtSubmitPlan}">Add Attractions</li>
+            <li ng-class="{'current':userAtAddInformation, 'done': userAtSubmitPlan}">Personal Information</li>
+            <li ng-class="{'current':userAtSubmitPlan}">Preview and Submit</li>
+        </ul>
+    </div>
+    <div class="selected-place-info">
+        <div class="top-info-bar">
+            <!--<div class="duration">-->
+                <!--18 hours <i class="fa fa-calendar"></i>-->
+            <!--</div>-->
+            <div class="place-info">
+                <h2>{{selectedPlaceInfo.place_name}}</h2>
+            </div>
+            <!--<div class="budget">-->
+                <!--<i class="fa fa-inr"></i> 15,000/--->
+            <!--</div>-->
+        </div>
+    </div>
+    <div ui-view="planning-steps-view" autoscroll="false"></div>
+</div>
+

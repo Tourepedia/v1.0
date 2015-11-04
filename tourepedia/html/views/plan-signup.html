@@ -1,0 +1,56 @@
+<div class="personal-information">
+    <div class="personal-information-container">
+        <ul class="plan-book-menu">
+            <li class="active">ENTER PASSWORD TO CREATE AN ACCOUNT FOR FREE</li>
+        </ul>
+        <div class="information-form plan" >
+            <form name="planForm" novalidate>
+                <div class="input-group">
+                    <label for="fullName1">Full Name*</label>
+                    <div class="inputs">
+                        <input type="text" name="fullName" id="fullName1" required ng-model="user.fullName"/>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="email1">Email*</label>
+                    <div class="inputs">
+                        <input type="email" ng-model="user.email" name="email1" id="email1" required/>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="mobileNumber1">Mobile*</label>
+                    <div class="inputs">
+                        <input type="number" ng-model="user.mobileNumber" name="mobileNumber1" id="mobileNumber1" required/>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password*</label>
+                    <div class="inputs">
+                        <input type="number" ng-model="user.password" name="password" id="password" required/>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="repassword">Re-Password*</label>
+                    <div class="inputs">
+                        <input type="number" ng-model="user.repassword" name="repassword" id="repassword" required/>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="address1">Address*</label>
+                    <div class="inputs">
+                        <input type="text" ng-model="user.address.line1" id="address1" name="address1" required/>
+                        <input type="text" ng-model="user.address.line2"/>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button data-ng-class="{'valid-form': planForm.$valid}" data-ng-click="proceedToSubmitThePlan({'name':'Sudhir'})" ui-sref="planATrip.proceed({'planningStage':'submit-plan'})">SUBMIT</button>
+                </div>
+            </form>
+            <div class="some-info">
+                <p>* Indicates fields mandatory to fill.</p>
+                <p>** Assured Money Back guarantee if detailed plan of the trip
+                    is not provided within 3 hours after confirmation of payment from the bank.</p>
+            </div>
+        </div>
+    </div>
+</div>

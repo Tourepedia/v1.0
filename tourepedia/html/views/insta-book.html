@@ -1,0 +1,40 @@
+
+<div data-ng-controller="InstaBookController" class="insta-book-container">
+  <div class="container">
+    <p class="problem">
+      Don't have time to surf the web or to crawling a website. 
+      Just write us and we will in touch with you in a time.
+    </p>
+    <hr/>
+    <form name="instaBookForm" novalidate="novalidate" data-ng-submit="submitInstaBook()"><span>Hi Tourepedia, <br></span>
+      <p class="letter-body"> You guys are amazing. 
+        <label>Please create an exiting, personalized trip for our holidays vacations to</label>
+        <select data-ng-model="user.placeName" data-ng-options="place as place for place in places" required="required"></select>.
+        <label>We are a group of around </label>
+        <select data-ng-model="user.numOfPeople" data-ng-options="persons as persons for persons in people" required="required"></select>&nbsp;people.
+        <label>We are looking for a </label>
+        <select data-ng-model="user.tripDuration" data-ng-options="day as day for day in numOfDays" required="required"></select>&nbsp;days trip in and around
+        <select data-ng-model="user.journeyStartingDate.month" data-ng-options="month as month for month in months" required="required"></select>
+        <select data-ng-model="user.journeyStartingDate.year" data-ng-options="year as year for year in years" required="required"></select>.
+        <label>Our Budget for the trip is <i class="fa fa-inr"></i></label>
+        <select data-ng-model="user.expectedBudget" data-ng-options="budget as budget for budget in budgets" required="required"></select>&nbsp;per person, including all personal expenditure.
+      </p>
+      <p>Thankyou.</p>
+      <p> 
+        <label>Name:</label>
+        <input type="text" data-ng-model="user.fullName" required="required"/>
+      </p>
+      <p> 
+        <label>Email:</label>
+        <input type="email" data-ng-model="user.email" required="required"/>
+      </p>
+      <p>
+        <label>Mobile No:</label>
+        <input type="number" data-ng-model="user.mobileNumber" required="required"/>
+      </p>
+      <p> 
+        <button type="submit" data-ng-disabled="instaBookForm.$invalid">Submit</button>
+      </p>
+    </form>
+  </div>
+</div>

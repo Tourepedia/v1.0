@@ -1,0 +1,177 @@
+<div class="place-info-container container">
+  <div class="go-back">
+    <a ui-sref="campusSpecial"> <i class="fa fa-angle-left"> go back</i></a>
+  </div>
+  <div class="card">
+    <div class="image" ng-style="{'background-image':'url(./tourepedia/images/campus-special/'+selectedPlace.img+')'}">
+      <p class="title">{{selectedPlace.name}}, <span class="sub-title">{{selectedPlace.state}}</span></p>
+      <a class="cta book-plan-cta bottom" ui-sref="campusSpecial.book({'id': selectedPlace.id})">Book</a>
+      <span class="price-info">
+        <span data-ng-show="selectedPlace.discountedPrice != ''" >
+          <i class="fa fa-inr"></i> {{selectedPlace.discountedPrice}}/-
+        </span>
+        <span data-ng-class="{'old-price': selectedPlace.discountedPrice != ''}">
+          <i class="fa fa-inr"></i> {{selectedPlace.price}}/-
+        </span>
+      </span> 
+    </div>
+    <div class="content">
+      <!-- <section class="about-place">
+        <h2>About the Place</h2>
+        <p>{{selectedPlace.about}}</p>
+      </section> -->
+      <section class="includes">
+        <h2>Trip Includes</h2>
+        <ul>
+          <li data-ng-repeat="include in selectedPlace.includes" >
+            {{include}}
+          </li>
+          <li data-ng-show="selectedPlace.sightSeeing.length > 0">Sightseeing:-
+            <ul>
+              <li data-ng-repeat="sightSeeing in selectedPlace.sightSeeing">{{sightSeeing}}</li>
+            </ul>
+		      </li>
+          <li data-ng-show="selectedPlace.adventures.length > 0">Adventures:-
+            <ul>
+              <li data-ng-repeat="adventure in selectedPlace.adventures">{{adventure}}</li>
+            </ul>
+		      </li>
+        </ul>
+      </section>
+      <section class="iternarray">
+        <h2>Itinerary</h2>
+        <ul>
+          <li data-ng-repeat="itinerary in selectedPlace.itinerary">
+            <span>Day {{$index}} -</span> {{itinerary}}
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="action">
+      <a class="cta book-plan-cta" ui-sref="campusSpecial.book({'id': selectedPlace.id})">Book</a>
+    </div>
+  </div>
+</div>
+<style>
+.place-info-container{
+  position: relative;
+  vertical-align: top;
+  box-sizing: border-box;
+  min-width: 320px;
+  padding: 0px 10px;
+  text-align: center;
+}
+
+.place-info-container .go-back{
+  text-align: right;
+  margin: 0px auto;
+  padding: 10px 0;
+  line-height: 1;
+}
+.place-info-container .go-back a{
+  display: inline-block;
+  font-size: 18px;
+  color: white;
+}
+
+
+.place-info-container .card, .place-info-container .go-back{
+  width: 100%;
+  max-width: 900px;
+}
+
+.place-info-container .card .image .title{
+  top: 0;
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-family: serif;
+}
+.place-info-container .card .image .title .sub-title{
+  font-size: 18px;
+  font-style: italic;
+}
+.place-info-container .card .image{
+  height: 450px;
+  overflow: hidden;
+}
+
+.place-info-container .card .price-info{
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0 20px 0 0;
+  padding: 10px;
+  font-size: 20px;
+}
+.place-info-container .card .price-info .old-price{
+  font-size: 15px;
+  text-decoration: line-through;
+  color: whitesmoke
+}
+.place-info-container .card .cta{
+  display: inline-block;
+  padding: 10px 30px;
+  box-shadow: 0px 10px 20px rgba(0,0,0,.3);
+  background: white;
+  color: dimgray;
+  text-transform: uppercase;
+  transition: all .15s ease-in-out;
+  border-radius: 3px;
+}
+.place-info-container .card .cta.book-plan-cta.bottom{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.place-info-container .card .cta.book-plan-cta{
+  color: white;
+  background: #4AA3DF;
+}
+.place-info-container .card .cta:hover{
+  box-shadow: 0px 15px 30px rgba(0,0,0,.5);
+}
+.place-info-container .card .content section{
+  padding: 20px 0px;
+  font-family: sans;
+  line-height: 1.6;
+  color: #34495E;
+}
+.place-info-container .card .content section h2{
+  color: #F1C40E;
+  padding-bottom: 10px;
+  font-weight: 100;
+  font-size: 28px;
+}
+.place-info-container .card .content section.about-place p{
+  text-indent: 30px;
+  font-size: 18px;
+}
+.place-info-container .card .content section ul{
+  list-style: none;
+  margin-left: 20px;
+  font-size: 18px;
+}
+.place-info-container .card .content section.iternarray ul li span{
+  font-weight: 600;
+  display: inline-block;
+  padding-right: 10px;
+}
+.place-info-container .card .content section.includes ul{
+  list-style: disc;
+}
+.place-info-container .card .action{
+  text-align: center;
+}
+
+
+.place-info-container .card .content section:not(:last-child){
+  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+}
+</style>

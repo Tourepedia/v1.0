@@ -1,0 +1,172 @@
+<div class="personal-information">
+    <div class="personal-information-container">
+        <ul class="plan-book-menu">
+            <li class="active">Review the information carefully and submit</li>
+        </ul>
+        <div class="information-form final-review" >
+            <div class="row">
+                <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="row ">
+                        <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"><span>Order Type:</span></div>
+                        <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p>{{user.planType}}</p></div>
+                    </div>
+                </div>
+                <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="row ">
+                        <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"><span>Place Name:</span></div>
+                        <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p>{{user.selectedPlace}}</p></div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="general-information">
+                <div class="row">
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"><span>Full Name:</span></div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.book.fullName}}</p></div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Email:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p>{{user.book.email}}</p> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"><span>Mobile:</span></div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.book.mobileNumber}}</p></div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Alt. Mobile:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p>{{user.book.altMobileNumber}}</p> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Number of People:</span></div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.book.numOfPeople}}</p></div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Expected Budget:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p><i class="fa fa-inr"></i> {{user.book.expectedBudget}}</p> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Type Of Trip:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p>{{user.book.typeOfTrip}}</p> </div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Trip Duration:</span></div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.book.tripDuration}}</p></div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-3 col-md-3 col-sm-3 col-xs-5 col-xxs-6"> <span>Journey Starting Date: </span> </div>
+                            <div class="value col-lg-9 col-md-9 col-sm-9 col-xs-7 col-xxs-6" > <p>{{user.journeyStartingDate}}</p> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="travel-information">
+                <div class="row">
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Origin City:</span></div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"><p>{{user.book.originCity}}</p></div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-4 col-md-4 col-sm-4 col-xs-5 col-xxs-6"> <span>Returning City:</span> </div>
+                            <div class="value col-lg-8 col-md-8 col-sm-8 col-xs-7 col-xxs-6"> <p>{{user.book.returningCity}}</p> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="info row ">
+                            <div class="key col-lg-2 col-md-2 col-sm-2 col-xs-5"><span>Travel Preference:</span></div>
+                            <div class="value col-lg-10 col-md-10 col-sm-10 col-xs-7"> <p>{{user.book.travel}}</p> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="accommodation-information">
+                <div class="row">
+                    <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-2 col-md-2 col-sm-2 col-xs-5"> <span>Hotel Preferences:</span></div>
+                            <div class="value col-lg-10 col-md-10 col-sm-10 col-xs-7"><p>{{user.book.hotels}}</p></div>
+                        </div>
+                    </div>
+                    <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="key col-lg-2 col-md-2 col-sm-2 col-xs-5"> <span>Amenities Preferences:</span> </div>
+                            <div class="value col-lg-10 col-md-10 col-sm-10 col-xs-7"><p>{{user.book.amenities}}</p> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="attractions-information">
+                <div class="info row" data-ng-show="user.ourPlanId == -1">
+                    <div class="key col-lg-2 col-md-2 col-sm-2 col-xs-5"><span>Attractions :</span></div>
+                    <div class="value col-lg-10 col-md-10 col-sm-10 col-xs-7">
+                        <p ng-show=" user.attractionsList.length == 0">No attraction added</p>
+                        <p data-ng-repeat="attraction in user.attractionsList">
+                            <b> Name </b>:  {{attraction.attraction_name}} <br/>
+                            <b>Info</b> :  {{attraction.attraction_about}}
+                            <br/> <br/>
+                        </p>
+                    </div>
+                </div>
+                <div class="info row" data-ng-show="user.ourPlanId != -1">
+                    Our Plan for <b>{{selectedPlaceInfo.place_name}}</b> is selected.
+                </div>
+            </div>
+            <hr/>
+            <div class="others-information">
+                <div class="info row">
+                    <div class="key col-lg-2 col-md-2 col-sm-2 col-xs-5"> <span>About Me/Us:</span></div>
+                    <div class="value col-lg-10 col-md-10 col-sm-10 col-xs-7"><p>{{user.book.aboutMeUs}}</p></div>
+                </div>
+                <div class="info row">
+                    <div class="key col-lg-2 col-md-2 col-sm-2 col-xs-5"> <span>More About Trip:</span></div>
+                    <div class="value col-lg-10 col-md-10 col-sm-10 col-xs-7"><p>{{user.book.moreAboutTrip}}</p></div>
+                </div>
+            </div>
+            <hr/>
+            <div class="proceed-buttons row" >
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-4">
+                    <span ui-sref="planATrip.proceed({'planningStage':'personal-information'})"
+                          data-ng-click="proceedToAddPersonalInformation({})">
+                        <i class="fa fa-arrow-left"></i> Go back
+                    </span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-8">
+                    <span ng-show="!isLoggedIn" onclick="LaunchDialog('login-dialog')">Login and Submit</span>
+                    <span ng-show="isLoggedIn" data-ng-click="submitThePlan()">Submit Plan</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

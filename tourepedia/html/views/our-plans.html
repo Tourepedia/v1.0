@@ -1,0 +1,111 @@
+<div class="preplanned-attraction-container">
+    <div class="banner-container">
+        <div class="image-container row">
+            <img class="col-lg-6" src="./tourepedia/images/our-plans/{{ourPlanCurrent.our_trips_img1}}" err-src="./tourepedia/images/our-plans/default.png" alt="image"/>
+            <img class="col-lg-6" src="./tourepedia/images/our-plans/{{ourPlanCurrent.our_trips_img2}}" err-src="./tourepedia/images/our-plans/default.png" alt="image"/>
+            <div class="description">
+                <p>{{selectedPlaceInfo.place_name}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row place-info-container" ng-init="item = 1">
+        <div class="col-lg-3 col-md-2 col-sm-3 col-xs-3 menu-container">
+            <ul>
+                <li data-ng-click="item = 1" data-ng-class="{'active':item==1}">
+                    <i class="fa fa-info fa-fw" ></i> &nbsp; <br/>
+                    <span>About</span>
+                </li>
+                <li data-ng-click="item = 2" data-ng-class="{'active':item==2}">
+                    <i class="fa fa-plane fa-fw" ></i> &nbsp; <br/>
+                    <span>Travel</span>
+                </li>
+                <li data-ng-click="item = 3" data-ng-class="{'active':item==3}">
+                    <i class="fa fa-building fa-fw" ></i> &nbsp; <br/>
+                    Sightseeing
+                </li>
+                <li data-ng-click="item = 4" data-ng-class="{'active':item==4}">
+                    <i class="fa fa-list-alt fa-fw" ></i> &nbsp; <br/>
+                    Stay
+                </li>
+                <li data-ng-click="item = 5" data-ng-class="{'active':item==5}">
+                    <i class="fa fa-question fa-fw" ></i> &nbsp; <br/>
+                    Terms and conditions
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-9 col-md-10 col-sm-9 col-xs-9 menu-item-values">
+            <div class="about" data-ng-show="item == 1">
+               {{ourPlanCurrent.our_trips_about[0]}}
+            </div>
+            <div class="travel" data-ng-show="item == 2">
+                <div class="travels" data-ng-repeat="travelType in ourPlanCurrent.our_trips_travel">
+                    <h3>{{travelType.travel_method}}</h3>
+                    <p>{{travelType.travel_about}}</p>
+                </div>
+            </div>
+            <div class="sightseeing" data-ng-show="item == 3">
+                <div class="travels" data-ng-repeat="sightScene in ourPlanCurrent.our_trips_sights">
+                    <h3>{{sightScene.sight_name}}</h3>
+                    <p>{{sightScene.sight_about}}</p>
+                </div>
+            </div>
+            <div class="stay" data-ng-show="item == 4">
+               {{ourPlanCurrent.plan_review}}
+Day wise Accommodation will be in Deluxe Rooms in the City specified as per your plan like- 3 days in X or 2 days in X and 2 days in Y. <br> you will get detailed information in the Blueprint of Trip, which will be given to you if you take a plan or book a trip.         </div>
+            <div class="term-and-conditions" data-ng-show="item == 5">
+• Extra Person : Children between 0 to 5 years- complimentary <br>
+• Meals on travelling is not included in the package and shall be paid by the customer. <br>
+• Entrance fees at any point shall be paid by customer. <br>
+• Payment in full must be made at the time of booking your reservation. <br>
+• No refund for short stay and un-availed facilities. <br>
+• Package includes all applicable taxes. <br>
+• Cancellation Policy : <br> 
+• Plan is non refundable, but you can modify it. 1st time modification in plan is non-chargeable but will be charged for next modification. <br>
+• for Plan and book i.e. Trip cancellation, fully/partially the following conditions will apply: <br> 60 days or before actual date of trip- 90% refund,60 days to 30 days of actual date of trip- 80% refund, 30 days to 15 days of actual date of trip- 70% refund, 15 days to 7 days of actual date of trip- 60% refund, 7 days to 72 hours from starting time of trip- 50% refund, Less than 72 hours- No refund <br>
+• For Detailed Terms and conditions refer to the site www.Tourepedia.com
+        </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12 proceed-group row" >
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+                    <span ui-sref="planATrip"
+                          class="valid-form"
+                          data-ng-click="processToAddAttraction()">
+                        <i class="fa fa-arrow-left"></i> Go back
+                    </span>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+                <span  ui-sref="planATrip.proceed({'planningStage':'personal-information'})" data-ng-click="proceedToAddOurPlan(ourPlanCurrent.our_trips_id)">Proceed</span>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .preplanned-attraction-container .menu-item-values{
+        line-height: 1.6;
+    }
+    .preplanned-attraction-container .menu-item-values .travels{
+        margin-bottom: 20px;
+    }
+
+    .preplanned-attraction-container  .proceed-group {
+        text-align: center;
+        padding: 20px 0 20px 0;
+    }
+
+    .preplanned-attraction-container .proceed-group span {
+        padding: 5px 10px;
+        border-radius: 25px;
+        color: rgb(140, 0, 0);
+        border: 2px solid rgb(140, 0, 0);
+        transition: all linear .15s;
+        display: inline-block;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    .preplanned-attraction-container .proceed-group span:hover{
+        background: rgb(140, 0, 0);
+        color:  #ffffcc;
+    }
+
+
+</style>

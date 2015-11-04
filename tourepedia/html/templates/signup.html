@@ -1,0 +1,130 @@
+<div class="dialog-box lg" id="signUp-dialog" data-ng-controller="SignUpController">
+    <div class="dialog-box-container">
+        <div class="fake-box-body">
+            <div class="fake-close-button"></div>
+        </div>
+        <div class="dialog-box-body">
+            <!-- place your code here -->
+            <!-- //////////////////////////////////////////////////// -->
+
+            <div class="panel panel-primary">
+          			<div class="panel-heading">
+          					<span class="h4">Register to Tourepedia</span>
+          			</div>
+
+          			<div class="panel-body">
+                <form name="signUpForm" class="signUpForm">
+                    <div class="form-group">
+                        <label  for="fullName">First Name*</label>
+                        <input class="form-control" type="text" name="fullName" id="fullName"
+                               ng-model="newUser.fullName"
+                               data-ng-focus="onFullName = true"
+                               data-ng-blur="onFullName = false"
+                               ng-class="{'required-error': !onFullName && signUpForm.fullName.$dirty && signUpForm.fullName.$error.required}"
+                               required
+                                >
+                        <div ng-show="!onFullName && signUpForm.fullName.$dirty && signUpForm.fullName.$invalid" class="error-container">
+                            <span class="error">Field is required.</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label  for="mobileNumber">Mobile No.</label>
+                        <input class="form-control" type="number" name="mobileNumber" id="mobileNumber"
+                               ng-model="newUser.mobileNumber"
+                               data-ng-focus="onMobileNumber = true"
+                               data-ng-blur="onMobileNumber = false"
+                               ng-minlength="10"
+                               ng-maxlength="10"
+                               ng-class="{
+                               'required-error':
+                               !onMobileNumber && signUpForm.mobileNumber.$dirty && (signUpForm.mobileNumber.$error.required || signUpForm.mobileNumber.$invalid)}"
+                               required
+                                >
+                        <div ng-show="!onMobileNumber && signUpForm.mobileNumber.$dirty && signUpForm.mobileNumber.$invalid" class="error-container">
+                            <span class="error">Enter a valid mobile number of 10 digits.</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label  for="email1">Email*</label>
+                        <input class="form-control" type="email" name="email" id="email1"
+                               ng-model="newUser.email"
+                               data-ng-focus="onEmail = true"
+                               data-ng-blur="onEmail = false"
+                               ng-class="{
+                               'required-error':
+                               !onEmail && signUpForm.email.$dirty && (signUpForm.email.$error.required || signUpForm.email.$invalid)}"
+                               required
+                                >
+                        <div ng-show="!onEmail && signUpForm.email.$dirty && signUpForm.email.$invalid" class="error-container">
+                            <span class="error">Enter a valid email address</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label  for="password1">Password*</label>
+                        <input class="form-control" type="password" name="password" id="password1"
+                               ng-model="newUser.password"
+                               ng-class="{
+                               'required-error':
+                               signUpForm.password.$dirty && signUpForm.password.$error.required }"
+                               ng-minlength="6"
+                               required
+                                >
+                         <div ng-show="signUpForm.password.$error.minlength " class="error-container">
+                             <span class="error">Password length must be at least 6 character</span>
+                         </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="rePassword">Retype Password*</label>
+                        <input class="form-control" type="password" name="rePassword" id="rePassword"
+                               ng-model="newUser.rePassword"
+                               ng-class="{'required-error': signUpForm.rePassword.$dirty && signUpForm.rePassword.$error.required}"
+                               required
+                                >
+                        <div class="error-container"
+                             ng-show="(signUpForm.password.$dirty && signUpForm.password.$valid &&  signUpForm.rePassword.$dirty && signUpForm.rePassword.$valid ) && (newUser.password != newUser.rePassword)">
+                            <span class="error">
+                                Password don't match
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fa fa-spinner fa-spin fa-lg" data-ng-show="signUpInProgress"></i><input class="form-control btn btn-success" type="button" id="signUp-submit" value="Submit"
+                               ng-disabled="signUpForm.$invalid"ng-class="{'ok': signUpForm.$valid && everyThingAlright(newUser)}"
+                               data-ng-click="registerUser(newUser)"
+                                >
+                    </div>
+                </form>
+            </div>
+
+            <!-- and before it -->
+            <!-- ////////////////////////////////////////////////////// -->
+            <div class="dialog-close-button" onClick="CloseDialog('signUp-dialog')">X</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.signUpForm input[type="text"], .signUpForm input[type="number"], .signUpForm input[type="email"], .signUpForm input[type="password"] {
+width:94%;}
+
+  .signUpForm input.ng-invalid.ng-touched {
+    border-color:  #FA787E;
+  }
+
+   .signUpForm input.ng-valid.ng-touched {
+    border-color:  #78FA89;
+  }
+.panel{
+  margin-bottom:0px;
+}
+	.panel .error{
+    font-size:12px;
+    color:#C70000;
+  }
+.dialog-box .dialog-box-container .dialog-close-button {
+
+  background: rgb(232, 232, 232);
+}
+</style>

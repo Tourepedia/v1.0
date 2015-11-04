@@ -1,0 +1,50 @@
+<div class="place-info select-destination" data-ng-controller="PlaceInfoController">
+    <div class="background-image">
+
+        <img data-ng-src="./tourepedia/images/home/{{images[selectedPlaceInfo.place_region_name]}}" alt="Back Image"/>
+    </div>
+    <div class="place-info-container">
+        <div class="center-info-content">
+            <div class="top-stand"></div>
+            <div class="info row">
+                <div class="content col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                    <p>
+                        <span class="place-name">{{selectedPlaceInfo.place_name}}</span> <br/>
+                        {{selectedPlaceInfo.place_about}} <br/>
+                        {{selectedPlaceInfo.place_feeling}}
+                    </p>
+
+                    <p>
+                        <b>Best time to visit</b>:- {{selectedPlaceInfo.place_bestTime}}<br/>
+                        <b>Nearby places to visit </b>: {{selectedPlaceInfo.place_near_by_places}} <br/>
+                        <b>Location</b> - {{selectedPlaceInfo.place_sea_level}} above the sea level. <br/>
+                        <b>Budget</b> - Starts At Rs. {{selectedPlaceInfo.place_ideal_budget}}/- &nbsp;
+                        <b>No. of days</b> - {{selectedPlaceInfo.place_idealNo_days}} days
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                    <div class="image">
+                        <img data-ng-src="./tourepedia/images/places-info/{{selectedPlaceInfo.place_img1}}"
+                             alt="image1"/><br/>
+                        <img data-ng-src="./tourepedia/images/places-info/{{selectedPlaceInfo.place_img2}}"
+                             alt="image1"/>
+                    </div>
+                </div>
+                <div class="proceed-button col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                     data-ng-click="processToAddAttraction()">
+                    <a ui-sref="planATrip">Proceed to Plan</a>
+                </div>
+            </div>
+            <div class="bottom-stand">
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* this style is used because at this moment we have removed that go down menu*/
+    .place-info .center-info-content {
+        padding-bottom: 0;
+    }
+
+</style>

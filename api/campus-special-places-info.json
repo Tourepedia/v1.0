@@ -1,0 +1,133 @@
+[
+  {
+    "id":0,
+    "name": "Dehradun and Mussoorie",
+    "info":"The fascinating queen of Himalayas will provide you with the perfect escapade from the monotony of routine life. (3 Days Trip)",
+    "price" : 4500,
+    "type": "Extended Weekends",
+    "popularity": "Popular",
+    "img":"dehrahunAndMusoorie.jpg",
+    "discountedPrice":""
+  },
+  {
+    "id":1,
+    "name": "Rishikesh",
+    "info":"Experience the spiritual bliss of the splashing Ganges, the exhilaration of standing on a hanging bridge, and much more !! (2 Days Trip)",
+    "price" : 3000,
+    "type": "Weekends",
+    "popularity": "Popular",
+    "img":"rishikesh.jpg",
+    "discountedPrice":""
+  },
+  {
+    "id":2,
+    "name": "Rishikesh Adventure Special",
+    "info":"You will literally live on the edge and perform river-rafting and camping with abundant safety measures. (2 Days Trip)",
+    "price" : 4000,
+    "type": "Weekends",
+    "popularity": "Popular",
+    "img":"rishikeshAdventureSpecial.jpeg",
+    "discountedPrice":""    
+  },
+  {
+    "id":3,
+    "name": "Agra and Fatehpur Sikri",
+    "info":"A visit to Taj Mahal with your special ones ignites the relationship you share. Such is the power of this marvellous piece of architecture. (2 Days Trip)",
+    "price" : 3500,
+    "type": "Weekends",
+    "popularity": "Popular",
+    "img":"agraAndFatehpur1.jpg",
+    "discountedPrice":3000
+  },
+  {
+    "id":4,
+    "name": "Agra and Fatehpur Sikri",
+    "info":"A visit to Taj Mahal with your special ones ignites the relationship you share. Such is the power of this marvellous piece of architecture. (1 Day Trip)",
+    "price" : 2200,
+    "type": "Weekends",
+    "popularity": "Popular",
+    "img":"agraAndFatehpur2.jpg",
+    "discountedPrice":1500
+  },
+  {
+    "id":5,
+    "name": "Binsar and Gwaldam",
+    "info":"You will feel a unique calmness and explorer-like thrills while you travel through the less explored and serene destinations. (3 Days Trip)",
+    "price" : 5000,
+    "type": "Extended Weekends",
+    "popularity": "Unexplored",
+    "img":"binsarAndGwaldam.jpg",
+    "discountedPrice":""
+  },
+  {
+    "id":6,
+    "name": "Pithoragarh",
+    "info":"A majestic fort curved in green hills, acting as a passage way among mountains  with scenic views of snow peaks are a treasure to cherish. (3 Days Trip)",
+    "price" : 5500,
+    "type": "Extended Weekends",
+    "popularity": "Unexplored",
+    "img":"pithoragarh.jpg",
+    "discountedPrice":""
+
+  },
+  {
+    "id":7,
+    "name": "Binsar-Chaukari",
+    "info":"Panoramic view of snow-capped series of higher Himalayas blazing with rays of sunset and sunrise is your ideal escaped. (3 Days Trip)",
+    "price" : 5000,
+    "type": "Extended Weekends",
+    "popularity": "Unexplored",
+    "img":"binsarChaukari.jpg",
+    "discountedPrice":""
+  },
+  {
+    "id":8,
+    "name": "Mussoorie-Chamba",
+    "info":"The foothills of Himalayas and its virgin destinations will enthrall and embrace you and make your journey memorable. (3 Days Trip)",
+    "price" : 5000,
+    "type": "Extended Weekends",
+    "popularity": "Unexplored",
+    "img":"mussorrieChamba.jpg",
+    "discountedPrice":""
+  },
+  {
+    "id":9,
+    "name": "Jaipur",
+    "info":"The confluence of color, culture, terrains and art has earned Jaipur the reputation of Paris of the East. Revel in the glory of the Pink City !! (2 Days Trip)",
+    "price" : 3700,
+    "type": "Weekends",
+    "popularity": "Popular",
+    "img":"jaipur1.jpg",
+    "discountedPrice":3000
+  },
+  {
+    "id":10,
+    "name": "Jaipur",
+    "info":"The confluence of color, culture, terrains and art has earned Jaipur the reputation of Paris of the East. Revel in the glory of the Pink City !! (3 Days Trip)",
+    "price" : 5000,
+    "type": "Extended Weekends",
+    "popularity": "Popular",
+    "img":"jaipur2.jpg",
+    "discountedPrice":4500
+  },
+  {
+    "id":11,
+    "name": "Khajuraho",
+    "info":"A UNESCO world heritage site in central India, Khajuraho is a world famous tourist and archaeological destination. (1 Day Trip)",
+    "price" : 2200,
+    "type": "Weekends",
+    "popularity": "Popular",
+    "img":"khajuraho1.jpg",
+    "discountedPrice":1800
+  },
+  {
+    "id":12,
+    "name": "Khajuraho",
+    "info":"A UNESCO world heritage site in central India, Khajuraho is a world famous tourist and archaeological destination. (2 Days Trip)",
+    "price" : 3500,
+    "type": "Weekends",
+    "popularity": "Popular",
+    "img":"khajuraho2.jpg",
+    "discountedPrice":3000
+  }
+]

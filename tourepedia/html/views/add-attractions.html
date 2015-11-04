@@ -1,0 +1,106 @@
+<!--this content is random, you can replace it with yours-->
+<div class="add-attractions">
+   <div class="add-attractions-container">
+      <div class="row">
+         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 attractions selected-attractions">
+            <div class="head" >
+               <p>Selected attractions</p>
+               <span data-ng-show="userAttractionsList.length == 0">Your attraction list is empty!</span>
+            </div>
+            <div class="attractions-container">
+               <div class="attraction" data-ng-repeat="attraction in user.attractionsList track by $index" >
+                  <div class="title">{{attraction.attraction_name}}</div>
+                  <div class="remove-attraction" >
+                     <span  data-ng-click="removeAttractionFromList(attraction)"><i class="fa fa-remove"></i> </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-6 row attractions ">
+            <div class="head" >
+               <p>Add attractions to your list</p>
+            </div>
+            <div class="attractions-container">
+               <div class="arrow left" data-ng-show="showPre" data-ng-click="preAttractionsList()"><i class="fa fa-angle-left"></i></div>
+               <div class="arrow right" data-ng-show="showNext" data-ng-click="nextAttractionsList()"><i class="fa fa-angle-right"></i></div>
+               <div class="col-lg-3 col-md-4  col-sm-4" data-ng-repeat="attraction in visibleAttractions track by $index">
+                  <div class="attraction"  >
+                     <div class="title">{{attraction.attraction_name}}</div>
+                     <div class="image">
+                        <img data-ng-src="./tourepedia/images/attractions/{{attraction.attraction_image}}" alt="image" err-src="./tourepedia/images/attractions/default.jpg"/>
+                     </div>
+                     <div class="attraction-info">{{attraction.attraction_about}}</div>
+                     <div class="add-attraction" title="Add Attraction" >
+                        <span data-ng-click="addAttractionToList(attraction)">+</span>
+                     </div>
+                     <div class="read-more" onclick="LaunchDialog('place-info-dialog')"  data-ng-click="setSelectedPlaceInfo(attraction)"> read more....</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="proceed-or-know">
+         <!--<p>Take the cursor over the place to know about ti and click to select it.</p>-->
+         <a ui-sref="planATrip.proceed({'planningStage':'personal-information'})"
+            data-ng-click="proceedToAddPersonalInformation(user.attractionsList)">
+            Proceed
+         </a>
+      </div>
+      <div class="other-options" data-ng-show="ourPlansForThisPlace.length != 0">
+         <p>OR</p>
+         <h2>Select From out existing plans</h2>
+         <div class="row existing-plans" >
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" data-ng-repeat="plans in ourPlansForThisPlace">
+               <div class="existing-plan" ui-sref="planATrip.prePlansInfo({'prePlan':'our-plans'})" data-ng-click="showOurPlan(plans.our_trips_id)">
+                  <div class="days">{{plans.our_trips_timeSpan}}</div>
+                  <div class="plan-info">
+                     <img data-ng-src="./tourepedia/images/our-plans/{{plans.our_trips_img1}}" alt="image" err-src="./tourepedia/images/attractions/default.png"/>
+                  </div>
+                  <div class="budget"> starts at &nbsp; <i class="fa fa-inr"></i>  {{plans.our_trips_cost}}/-</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="dialog-box lg" id="place-info-dialog">
+      <div class="dialog-box-container">
+         <div class="fake-box-body">
+            <div class="fake-close-button"></div>
+         </div>
+         <div class="dialog-box-body">
+            <!-- place your code here -->
+            <!-- //////////////////////////////////////////////////// -->
+
+               <div class="selected-place-info">
+                  <h2>{{selectedAttractionInfo.attraction_name}}</h2>
+                  <p>{{selectedAttractionInfo.attraction_about}}</p>
+               </div>
+
+            <!-- and before it -->
+            <!-- ////////////////////////////////////////////////////// -->
+            <div class="dialog-close-button" onClick="CloseDialog('place-info-dialog')">X</div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<style>
+   .dialog-box .selected-place-info{
+      padding: 30px 20px;
+   }
+   .dialog-box .selected-place-info h2{
+      color: #464444;
+      padding: 10px 0;
+      text-transform: capitalize;
+      border-bottom: 1px solid silver;
+   }
+   .dialog-box .selected-place-info p{
+      font-family: "Sylfaen", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      font-size: 18px;
+      color:#514f4f;
+      padding: 10px 0;
+   }
+
+</style>

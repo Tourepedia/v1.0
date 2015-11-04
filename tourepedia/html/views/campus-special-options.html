@@ -1,0 +1,80 @@
+<ul class="menu-bar">
+  <section class="filters-section">
+    <h3>Filter by</h3>
+    <section class="filters-subsection">
+      <h4>Offers <em><small>(valid till 10th Sept'15)</small></em></h4>
+      <li>
+        <input id="offerUpTo30" type="checkbox" data-ng-model="offerUpTo[0]" > 
+        <label for="offerUpTo30">Upto 30% Off</label>
+      </li> 
+    </section>
+    <section class="filters-subsection">
+      <h4>Type</h4>
+      <li><input id="weekends" type="checkbox" data-ng-model="placeTypes[0]" data-ng-click="addTypeFilter('Weekends')"> <label for="weekends">Weekends</label></li>
+      <li><input id="extendedWeekends"  type="checkbox" data-ng-model="placeTypes[1]" data-ng-click="addTypeFilter('Extended Weekends')"> <label for="extendedWeekends">Extended Weekends</label></li>
+    </section>
+    <section class="filters-subsection">
+      <h4>Popularity</h4>
+      <li><input id="unexplored" type="checkbox" data-ng-model="placePopular[0]" data-ng-click="addPopularityFilter('Unexplored')"> <label for="unexplored">Unexplored</label></li>
+      <li><input id="popular"  type="checkbox" data-ng-model="placePopular[1]" data-ng-click="addPopularityFilter('Popular')"> <label for="popular">Popular</label></li>
+    </section>
+  </section>
+  <section class="sorts">
+    <h3>Sort by</h3>
+    <section class="sorts-subsection">
+      <h4>Price</h4>
+      <li><input id="lowToHigh" type="radio" name="price-sort" data-ng-model="options.sortByPrice" data-ng-value="false"> <label for="lowToHigh">low to high</label></li>
+      <li><input id="highToLow" type="radio" name="price-sort" data-ng-model="options.sortByPrice" data-ng-value="true"> <label for="highToLow">high to low</label></li>
+    </section>
+  </section>
+</ul>
+<style>
+.campus-special-container .menu-bar{
+  display: inline-block;
+  vertical-align: top;
+  list-style: none;
+  background: white;
+  border-radius: 3px;
+  width: 240px;
+  margin: 0px 10px 20px;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,.2);
+  box-sizing: border-box;
+  text-align: left;
+}
+.campus-special-container .menu-bar section{
+  padding: 10px;
+}
+.campus-special-container .menu-bar>section:not(:last-child){
+  border-bottom: 1px solid silver;
+}
+.campus-special-container .menu-bar section h3{
+  color: dimgray;
+  border-bottom: 1px solid #E0DFDF;
+  padding: 5px 0;
+}
+.campus-special-container .menu-bar section h4{
+  color: gray;
+}
+.campus-special-container .menu-bar li{
+  line-height: 1;
+  margin-left: 10px;
+}
+.campus-special-container .menu-bar li label{
+  display: inline-block;
+  padding: 10px 0px 5px;
+  cursor: pointer;
+  font-weight: 500;
+  color: dimgray;
+  position: relative;
+}
+.campus-special-container .menu-bar li input:checked + label::after, .campus-special-container .menu-bar li input:checked + label::before{
+  display: block;
+}
+
+@media (max-width: 582px) {
+  .campus-special-container .menu-bar{
+    width: 300px;
+  }
+}
+
+</style>

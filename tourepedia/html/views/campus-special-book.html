@@ -1,0 +1,323 @@
+<div class="campus-special-book-container">
+  <header>
+    <span class="place-name">{{selectedPlace.name}}</span>
+    <span class="price" data-ng-show="selectedPlace.discountedPrice == ''">
+      <i class="fa fa-inr"></i> {{selectedPlace.price}}/-**
+    </span>
+    <span class="price" data-ng-show="selectedPlace.discountedPrice != ''">
+      <i class="fa fa-inr"></i> {{selectedPlace.discountedPrice}}/-**
+    </span>
+    <span>Trip Type: {{selectedPlace.type}} </span>
+  </header>
+  <div class="info-form">
+    <form name="campusSpecialForm"  class="row" novalidate data-ng-submit="submitPlan()">
+      <div class="col-sm-6 book-form-full-name">
+        <div class="inputs-group"
+        data-ng-init="fullNameFocus = false"
+        data-ng-class="{'has-focus': fullNameFocus,
+          'has-error': campusSpecialForm.fullName.$touched && campusSpecialForm.fullName.$error.required,
+          'has-value': campusSpecialForm.fullName.$touched && campusSpecialForm.fullName.$viewValue || user.fullName && user.fullName != ''
+         }">
+          <input type="text" id="fullName" name="fullName" required autofocus
+            data-ng-focus="fullNameFocus = true"
+             data-ng-blur="fullNameFocus = false"
+             data-ng-model="user.fullName"
+          />
+          <label for="fullName">Full Name*</label>
+        </div>
+      </div>
+      <div class="col-sm-6 book-form-email">
+        <div class="inputs-group"
+        data-ng-init="emailFocus = false"
+        data-ng-class="{'has-focus': emailFocus,
+          'has-error': campusSpecialForm.email.$touched && campusSpecialForm.email.$error.required,
+          'has-value': campusSpecialForm.email.$touched && campusSpecialForm.email.$viewValue || user.email && user.email != ''
+         }">
+          <input type="email" id="email" name="email" required
+            data-ng-focus="emailFocus = true"
+             data-ng-blur="emailFocus = false"
+             data-ng-model="user.email"
+          />
+          <label for="email">Email*</label>
+        </div>
+      </div>
+      <div class="col-sm-6 book-form-mobile-number">
+        <div class="inputs-group"
+        data-ng-init="mobileNumberFocus = false"
+        data-ng-class="{'has-focus': mobileNumberFocus,
+          'has-error': campusSpecialForm.mobileNumber.$touched && campusSpecialForm.mobileNumber.$error.required,
+          'has-value': campusSpecialForm.mobileNumber.$touched && campusSpecialForm.mobileNumber.$viewValue  || user.mobileNumber && user.mobileNumber != ''
+         }">
+          <input type="number" id="mobileNumber" name="mobileNumber" required
+            data-ng-focus="mobileNumberFocus = true"
+             data-ng-blur="mobileNumberFocus = false"
+             data-ng-model="user.mobileNumber"
+          />
+          <label for="mobileNumber">Mobile Number*</label>
+        </div>
+      </div>
+      <div class="col-sm-6 row book-form-date" data-ng-init="user.journeyStartingDate = {'year': 2015, 'month': 'January', 'day': 1}">
+        <div class="col-xxs-4">
+          <div class="inputs-group">
+            <select  id="year"  name="year"  ng-options="year as year for year in years" required  data-ng-model="user.journeyStartingDate.year">
+            </select>
+          </div>
+        </div>
+        <div class="col-xxs-5">
+          <div class="inputs-group">
+            <select  id="month" name="month" required  ng-options="month as month for month in months"  data-ng-model="user.journeyStartingDate.month">
+            </select>
+          </div>
+        </div>
+        <div class="col-xxs-3">
+          <div class="inputs-group ">
+            <select  id="day"  name="day" required ng-options="day as day for day in days" data-ng-model="user.journeyStartingDate.day">
+              <option value="2015">2015</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 row">
+        <div class="col-sm-4 book-form-persons">
+          <div class="inputs-group"
+          data-ng-init="numOfPersonsFocus = false"
+          data-ng-class="{'has-focus': numOfPersonsFocus,
+            'has-error': campusSpecialForm.numOfPersons.$touched && campusSpecialForm.numOfPersons.$error.required,
+            'has-value': campusSpecialForm.numOfPersons.$touched && campusSpecialForm.numOfPersons.$viewValue || user.numOfPersons && user.numOfPersons != ''
+           }">
+            <input type="number" id="numOfPersons" name="numOfPersons" required
+              data-ng-focus="numOfPersonsFocus = true"
+               data-ng-blur="numOfPersonsFocus = false"
+               data-ng-model="user.numOfPersons"
+            />
+            <label for="fullName">Number Of Persons*</label>
+          </div>
+        </div>
+        <div class="col-sm-8" data-ng-show="campusSpecialForm.numOfPersons.$viewValue">
+          <div class="col-xxs-4">
+            <div class="inputs-group"
+            data-ng-init="childrenFocus = false"
+            data-ng-class="{'has-focus': childrenFocus,
+              'has-value': campusSpecialForm.children.$touched && campusSpecialForm.children.$viewValue || user.children && user.children != ''
+             }">
+              <input type="number" id="children" name="children"
+                data-ng-focus="childrenFocus = true"
+                 data-ng-blur="childrenFocus = false"
+                 data-ng-model="user.children"
+              />
+              <label for="children">Children</label>
+            </div>
+          </div>
+          <div class="col-xxs-4">
+            <div class="inputs-group"
+            data-ng-init="maleFocus = false"
+            data-ng-class="{'has-focus': maleFocus,
+              'has-value': campusSpecialForm.male.$touched && campusSpecialForm.male.$viewValue || user.male && user.male != ''
+             }">
+              <input type="number" id="male" name="male"
+                data-ng-focus="maleFocus = true"
+                 data-ng-blur="maleFocus = false"
+                 data-ng-model="user.male"
+              />
+              <label for="male">Male</label>
+            </div>
+          </div>
+          <div class="col-xxs-4">
+            <div class="inputs-group"
+            data-ng-init="femaleFocus = false"
+            data-ng-class="{'has-focus': femaleFocus,
+              'has-value': campusSpecialForm.female.$touched && campusSpecialForm.female.$viewValue || user.female && user.female != ''
+             }">
+              <input type="number" id="female" name="female"
+                data-ng-focus="femaleFocus = true"
+                 data-ng-blur="femaleFocus = false"
+                 data-ng-model="user.female"
+              />
+              <label for="kids">Female</label>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-sm-6 book-form-address">
+        <div class="inputs-group"
+        data-ng-init="addressFocus = false"
+        data-ng-class="{'has-focus': addressFocus,
+          'has-error': campusSpecialForm.address.$touched && campusSpecialForm.address.$error.required,
+          'has-value': campusSpecialForm.address.$touched && campusSpecialForm.address.$viewValue || user.address && user.address != ''
+         }">
+          <input type="text" id="address" name="address" required
+            data-ng-focus="addressFocus = true"
+             data-ng-blur="addressFocus = false"
+             data-ng-model="user.address"
+          />
+          <label for="fullName">Address*</label>
+        </div>
+      </div>
+      <div class="col-sm-12 book-form-queries">
+        <div class="inputs-group"
+        data-ng-init="queriesFocus = false"
+        data-ng-class="{'has-focus': queriesFocus,
+          'has-error': campusSpecialForm.queries.$touched && campusSpecialForm.queries.$error.required,
+          'has-value': campusSpecialForm.queries.$touched && campusSpecialForm.queries.$viewValue || user.queries && user.queries != ''
+         }">
+          <textarea  id="queries" rows="5" name="queries"
+            data-ng-focus="queriesFocus = true"
+             data-ng-blur="queriesFocus = false"
+             data-ng-model="user.queries"
+          /> </textarea>
+          <label for="queries">Any Queries</label>
+        </div>
+      </div>
+      <div class="col-sm-12 book-form-info">
+        <p> <input type="checkbox" id="agreement" name="agreement" required
+           data-ng-model="user.agreement"
+        />
+        <label for="agreement">By submitting this form, you are agree with our <a target="_blank" ui-sref="termConditions">Terms & Conditions</a> and <a target="_blank" ui-sref="privacyPolicies">Privacy Policies</a>.</label>
+        <br/><br/><span>** Price may change depending upon number of people in the group.</span>
+
+      </p>
+      </div>
+      <div class="col-sm-12 book-form-submit">
+        <button type="submit" data-ng-disabled="campusSpecialForm.$invalid">Submit <i data-ng-show="submittingPlan" class="fa fa-spin fa-spinner fa-lg"></i></button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<style>
+  .campus-special-book-container {
+    max-width: 900px;
+    margin: 10px auto 75px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(151, 151, 151, 0.58);
+    border-radius: 3px;
+  }
+  .campus-special-book-container header{
+    padding: 10px 0;
+    color: white;
+    background: #34495E;
+    padding: 20px;
+    border-radius: 3px 3px 0 0;
+    font-family: serif;
+  }
+  .campus-special-book-container header span{
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 2px 10px;
+  }
+  .campus-special-book-container header .place-name{
+    font-size: 20px;
+  }
+  .info-form{
+    padding: 10px 30px;
+  }
+  .info-form .inputs-group{
+    position: relative;
+    padding-top: 21px;
+    margin-bottom: 1.5em;
+    margin-right: 20px;
+  }
+  .info-form .inputs-group::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    height: 2px;
+    background: #40A9F2;
+    transition: all 0.3s ease-out;
+    box-sizing: inherit;
+  }
+  .info-form .inputs-group.has-value::after{
+    right: 0%;
+  }
+
+  .info-form .inputs-group.has-focus.has-error::after{
+    background: #FA787E;
+  }
+  .info-form .inputs-group.has-focus::after{
+    right: 0%;
+  }
+  .info-form h3.label{
+    color: dimgray;
+  }
+  .info-form .inputs-group input,.info-form .inputs-group select, .info-form .inputs-group textarea{
+    display: inline-block;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    vertical-align: baseline;
+    transition: all .35s ease-in-out;
+    box-shadow: none;
+    color: #666;
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .info-form .inputs-group.has-error input{
+    border-color: #FA787E;
+  }
+  .info-form .inputs-group textarea{
+    resize: none;
+    overflow: auto;
+    display: block;
+  }
+  .info-form .inputs-group input + label, .info-form .inputs-group textarea + label{
+    pointer-events: none;
+    position: absolute;
+    left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all .2s linear;
+    top: 30px;
+    font-size: 100%;
+    color: #979797;
+    font-size: 18px !important;
+  }
+  .info-form .inputs-group input:focus + label, .info-form .inputs-group.has-value input + label,
+  .info-form .inputs-group textarea:focus + label, .info-form .inputs-group.has-value textarea + label{
+    top: 0px;
+    left: 0px;
+    font-size: 15px !important;
+    color: #40a9f2;
+  }
+  .info-form .book-form-info{
+    color: gray;
+    padding-bottom: 10px;
+  }
+  .info-form .book-form-info p a{
+    color: #21a1e1;
+  }
+  .info-form .book-form-info p label{
+    cursor: pointer;
+  }
+  .info-form .book-form-info p a:hover{
+    text-decoration: underline;
+  }
+  .info-form .book-form-submit{
+    padding: 20px 10px;
+  }
+  .info-form .book-form-submit button{
+    line-height: 1;
+    padding: .8em 1.5em;
+    background: #40A9F2;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 5px;
+    transition: all linear .1s;
+  }
+  .info-form .book-form-submit button:disabled{
+    cursor: not-allowed;
+  }
+  .info-form .book-form-submit button:not(:disabled):hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0 4px 15px;
+  }
+
+  @media (max-width: 450px) {
+    .info-form{
+      padding-left: 10px;
+      padding-right:10px;
+    }
+  }
+</style>

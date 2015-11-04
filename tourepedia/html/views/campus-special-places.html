@@ -1,0 +1,113 @@
+<div class="places-container" data-ng-hide="showInfo">
+  <div class="places-fetching-in-progress" data-ng-show="fetchingPlaces"> <i class="fa fa-spin fa-spinner fa-lg"></i></div>
+  <div class="place" data-ng-repeat="place in filteredPlaces = (places  | PlaceTypeFilter:typeFilter | PlacePopularityFilter:popularityFilter| OfferFilter:[offerUpTo[0]]  | orderBy:'price':options.sortByPrice )">
+    <div class="card">
+      <div class="image" ng-style="{'background-image':'url(./tourepedia/images/campus-special/'+place.img+')'}">
+        <span class="title">{{place.name}}</span>
+      </div>
+      <div class="content">
+        <p class="info-para">{{place.info}}</p>
+        <p class="price"> 
+          <span class="new-price" data-ng-show="place.discountedPrice != ''">
+            <i class="fa fa-inr"></i> {{place.discountedPrice}}/-
+          </span> 
+          <span data-ng-class="{'old-price': place.discountedPrice != ''}">
+            <i class="fa fa-inr"></i> {{place.price}}/-
+          </span>
+          
+        </p>
+        <p class="type-popularity">({{place.type}} / {{place.popularity}})</p>
+      </div>
+      <div class="action">
+        <a data-ng-click="getPlace(place.id)" ui-sref=".place-info({'id':place.id})">Trip info</a>
+        <a data-ng-click="getPlace(place.id)" ui-sref=".book({'id': place.id})">Book</a>
+      </div>
+    </div>
+  </div>
+  <div class="no-places" data-ng-show="!fetchingPlaces && filteredPlaces.length === 0 ">
+    No places
+  </div>
+</div>
+
+<style>
+
+.places-container{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: calc( 100% - 270px);
+  box-sizing: border-box;
+  min-width: 320px;
+}
+.places-container .no-places, .places-container .places-fetching-in-progress{
+  margin: 0px 10px;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0;
+}
+.places-container .places-fetching-in-progress{
+  color: white;
+}
+.places-container .no-places{
+  background: white;
+  color: dimgray;
+  border-radius: 3px;
+}
+.places-container .place{
+  display: inline-block;
+  width: 33%;
+  min-width: 320px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.places-container .place .content{
+  font-size: 18px;
+  font-family: sans;
+  color: #565656;
+}
+.places-container .place .content .info-para{
+  text-indent: 10px;
+  text-align: justify;
+  height: 100px;
+  overflow-y: auto;
+}
+.places-container .place .content .type-popularity{
+  font-size: 14px;
+}
+
+.places-container .place p.price{
+  padding: 7px 0;
+  font-weight: 600;
+}
+.places-container .place p.price .old-price{
+  font-size: 14px;
+  color: silver;
+  text-decoration: line-through;
+}
+.places-container .place p.price .new-price{
+  color: black
+}
+
+.places-container .place .image .title{
+  font-size: 20px;
+  padding: 2px 7px;
+}
+.card .image{
+  height: 230px;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (max-width: 1250px) {
+  .places-container .place{
+    width: 47%;
+  }
+}
+@media (min-width: 1650px) {
+  .places-container .place{
+    width: 23%;
+  }
+}
+
+</style>
